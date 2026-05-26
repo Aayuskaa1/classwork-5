@@ -124,18 +124,18 @@ class _BookScreenState extends State<BookScreen> {
                     const SizedBox(height: 6),
                     TextFormField(
                       controller: _bookNameController,
-                      decoration: _inputDecoration('e.g. Clean Code'),
+                      decoration: _inputDecoration(' '),
                       validator: (v) => v == null || v.trim().isEmpty ? 'Enter book name' : null,
                     ),
 
                     const SizedBox(height: 14),
 
                     // ISBN
-                    const Text('ISBN Number', style: TextStyle(fontSize: 13, color: Color(0xFF5C4033))),
+                    const Text('Book ID', style: TextStyle(fontSize: 13, color: Color(0xFF5C4033))),
                     const SizedBox(height: 6),
                     TextFormField(
                       controller: _isbnController,
-                      decoration: _inputDecoration('e.g. 978-0-13-468599-1'),
+                      decoration: _inputDecoration(' '),
                       validator: (v) => v == null || v.trim().isEmpty ? 'Enter ISBN number' : null,
                     ),
 
@@ -146,7 +146,7 @@ class _BookScreenState extends State<BookScreen> {
                     const SizedBox(height: 6),
                     TextFormField(
                       controller: _priceController,
-                      decoration: _inputDecoration('e.g. 1250.00'),
+                      decoration: _inputDecoration(' '),
                       keyboardType: const TextInputType.numberWithOptions(decimal: true),
                       inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
                       validator: (v) {
